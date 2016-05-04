@@ -5,5 +5,5 @@ coverage/
 .idea/
 .tmp/
 dist/
-
+doc/sc5/app/
 typings/
