@@ -1,0 +1,1 @@
+# angular-type-sample project
