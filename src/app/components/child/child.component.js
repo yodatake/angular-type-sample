@@ -4,7 +4,8 @@ function child() {
         templateUrl: 'app/components/child/child.html',
         controller: ChildController,
         bindings: {
-            'child': '<'
+            'child': '<',
+            'status': '<'
         }
     };
 }
@@ -13,7 +14,11 @@ var ChildController = (function () {
     function ChildController() {
     }
     ChildController.prototype.$onInit = function () {
-        alert(this.child.name);
+    };
+    ChildController.prototype.$onChanges = function (changesObj) {
+    };
+    ChildController.prototype.$doCheck = function () {
+        alert(this.status);
     };
     return ChildController;
 }());

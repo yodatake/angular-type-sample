@@ -1,17 +1,14 @@
-.acme-navbar-text{
-  color: white;
-}
-
-a {
-  color: black;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0;
-  line-height: 1.25em;
-}
-
+// Test directive
+//
+// markup:
+// <child>If you see this something is wrong</child>
+//
+// sg-angular-directive:
+// name: typeSample
+// template: app/components/child/child.html
+// file: app/components/child/child.component.js
+//
+// Styleguide 1.0.1
 a:hover, a:focus {
   color: greenyellow;
 }

@@ -1,5 +1,6 @@
 <div>
   <b>{{$ctrl.title}}</b>
   <br>
-  <child ng-repeat="child in $ctrl.childlen" child='child'></child>
+  <child ng-repeat="child in $ctrl.childlen" child='child' status='$ctrl.status'></child>
+  <input type="button" ng-click="$ctrl.toggleHide()" value="hide">
 </div>

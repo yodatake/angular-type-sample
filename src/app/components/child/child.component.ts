@@ -1,10 +1,13 @@
+import {StatusObj} from "../parent/parent.component";
+
 /** @ngInject */
 export function child(): angular.IComponentOptions {
   return {
     templateUrl: 'app/components/child/child.html',
     controller: ChildController,
     bindings: {
-      'child': '<'
+      'child': '<',
+      'status': '<'
     }
   };
 
@@ -14,12 +17,22 @@ export function child(): angular.IComponentOptions {
 export class ChildController {
 
   public child: Child;
+  public status: StatusObj;
 
-    constructor() {
+  constructor() {
   }
 
   $onInit(): void {
-    alert(this.child.name);
+  }
+
+  $onChanges(changesObj: any): void {
+    // if (changesObj.status) {
+    //   alert(this.status.hide);
+    // }
+  }
+
+  $doCheck() {
+    alert(this.status);
   }
 
 }
